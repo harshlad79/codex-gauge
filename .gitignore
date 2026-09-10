@@ -1,0 +1,40 @@
+.testdeps/
+__pycache__/
+*.pyc
+
+# Credentials and private key material, regardless of subdirectory.
+**/auth.json
+**/*credentials*.json
+**/*.pem
+**/*.key
+**/*.pfx
+**/*.secret
+**/*.token
+
+# Runtime/private state. Keep locally; never version account usage history.
+artifacts/rainmeter-skin/@Resources/Usage.inc
+artifacts/rainmeter-skin/@Resources/UsageHistory.jsonl
+artifacts/rainmeter-skin/@Resources/UsageHistory.jsonl.state.json
+artifacts/rainmeter-skin/@Resources/.FetchUsage.lock
+
+# Archived live snapshots can contain private usage telemetry and are already
+# preserved on disk in backups/. Source code is tracked separately.
+backups/
+backups/**/Usage.inc
+backups/**/UsageHistory.jsonl
+backups/**/UsageHistory.jsonl.state.json
+backups/**/.FetchUsage.lock
+runtime-snapshots/**/Usage.inc
+runtime-snapshots/**/UsageHistory.jsonl
+
+# Private conversation and engineering artifacts.
+conversation/
+docs/superpowers/
+docs/07-conversation-summary-ko.md
+docs/08-storage-manifest-ko.md
+verification/
+
+# Internal archive metadata and machine-specific verification report.
+manifest.json
+checksums/
+docs/06-verification-report-ko.md
